@@ -11,7 +11,6 @@ require 'uri'
 require 'nokogiri'
 require 'open-uri'
 
-
 module Sitemap2020
   class Error < StandardError; end
 
