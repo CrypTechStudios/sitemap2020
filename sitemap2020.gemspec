@@ -6,12 +6,12 @@ require "sitemap2020/version"
 Gem::Specification.new do |spec|
   spec.name          = "sitemap2020"
   spec.version       = Sitemap2020::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["CrypTech Studios, Inc."]
+  spec.email         = ["gems@cryptechstudios.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Gem to generate sitemap for rails site.}
+  spec.description   = %q{Gem to generate sitemap for rails site, includes: rake tasks to generate, controller and view to point google, etc... to}
+  spec.homepage      = "https://github.com/CrypTechStudios/sitemap2020.git"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -32,10 +32,15 @@ Gem::Specification.new do |spec|
   spec.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
-  spec.bindir        = "exe"
+  # spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "set"
+  spec.add_development_dependency "uri"
+  spec.add_development_dependency "nokogiri"
+  spec.add_development_dependency "open-uri"
+
 end
